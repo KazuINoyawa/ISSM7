@@ -33,7 +33,9 @@ Dự án được thực hiện nhằm:
 ## 5. Quá trình thực hiện theo từng tuần
 
 ### Week 1
-- (Nội dung sẽ bổ sung)
+- Thực hiện cài đặt python, biến môi trường, extensions.
+- Thực hiện cấu trúc thư mục dự án.
+- Lập trình bài tập cơ bản về python.
 
 ---
 
@@ -49,3 +51,5 @@ Dự án được thực hiện nhằm:
 
 ## 8. Kết luận
 
+--- 
+- Release: 1.1.0
