@@ -3,7 +3,7 @@
 ## 1. Thông tin chung
 - **Tên dự án:** Hệ Thống Dự Đoán Nguy Cơ Và Cảnh Báo Cháy Rừng Thông Minh.
 - **Môn học:** HỆ THỐNG THÔNG MINH
-- **Giảng viên: Lê Duy Hùng
+- **Giảng viên:** Lê Duy Hùng
 - **Thời gian thực hiện:** Week 1 – Week 12
 
 ---
@@ -31,9 +31,36 @@ Dự án được thực hiện nhằm:
 Hệ thống được thiết kế nhằm phát hiện và cảnh báo sớm nguy cơ cháy rừng bằng cách kết hợp nhiều phương pháp trí tuệ nhân tạo và triển khai trực tiếp trên thiết bị nhúng ESP32-S3.
 
 Hệ thống hoạt động theo kiến trúc đa tầng:
-- Tầng 1 - Dự đoán nguy cơ môi trường (MLP)
-- Tầng 2 - Phát hiện hình ảnh (CNN)
-- Tầng 3 - Hệ chuyên gia (Rule-Based System)
+- **Tầng 1** - Dự đoán nguy cơ môi trường (MLP)
+  Sử dụng mạng nơ-ron truyền thẳng (Multi-Layer Perceptron) để phân tích các yếu tố môi trường:
+  + Nhiệt độ
+  + Độ ẩm
+  + Nồng độ khói
+  + Lượng mưa
+  + Tốc độ gió (từ dataset huấn luyện)
+  
+  Mô hình dự đoán mức nguy cơ cháy rừng:
+  + Low
+  + Medium
+  +High
+- **Tầng 2** - Phát hiện hình ảnh (CNN)
+  Sử dụng mạng tích chập (Convolutional Neural Network) để:
+  + Phát hiện khói
+  + Phát hiện lửa
+  + Phân biệt môi trường bình thường
+  
+  Ảnh đầu vào được xử lý:
+  + Resize 64x64
+  + Grayscale
+  + Quantized int8
+  + Tối ưu để chạy trên ESP32-S3
+- **Tầng 3** - Hệ chuyên gia (Rule-Based System)
+  Hệ chuyên gia kết hợp kết quả từ MLP và CNN để đưa ra cảnh báo cuối cùng theo cơ chế suy diễn tiến (Forward Chaining).
+
+  Ví dụ luật:
+  + Nếu (MLP = High) và (CNN = Fire) → Emergency
+  + Nếu (MLP = High) và (CNN = Smoke) → Warning
+  + Nếu (MLP = Low) và (CNN = Normal) → Safe
 ---
 
 ## 5. Quá trình thực hiện theo từng tuần
@@ -43,6 +70,8 @@ Hệ thống hoạt động theo kiến trúc đa tầng:
 - Thực hiện cấu trúc thư mục dự án.
 - Lập trình bài tập cơ bản về python.
 
+### Week 2
+- 
 ---
 
 ## 6. Kết quả đạt được
