@@ -1,8 +1,9 @@
 # GIỚI THIỆU DỰ ÁN NHÓM
 
 ## 1. Thông tin chung
-- **Tên dự án:** 
+- **Tên dự án:** Hệ Thống Dự Đoán Nguy Cơ Và Cảnh Báo Cháy Rừng Thông Minh.
 - **Môn học:** HỆ THỐNG THÔNG MINH
+- **Giảng viên: Lê Duy Hùng
 - **Thời gian thực hiện:** Week 1 – Week 12
 
 ---
@@ -27,7 +28,12 @@ Dự án được thực hiện nhằm:
 ---
 
 ## 4. Mô tả tổng quan dự án
+Hệ thống được thiết kế nhằm phát hiện và cảnh báo sớm nguy cơ cháy rừng bằng cách kết hợp nhiều phương pháp trí tuệ nhân tạo và triển khai trực tiếp trên thiết bị nhúng ESP32-S3.
 
+Hệ thống hoạt động theo kiến trúc đa tầng:
+- Tầng 1 - Dự đoán nguy cơ môi trường (MLP)
+- Tầng 2 - Phát hiện hình ảnh (CNN)
+- Tầng 3 - Hệ chuyên gia (Rule-Based System)
 ---
 
 ## 5. Quá trình thực hiện theo từng tuần
