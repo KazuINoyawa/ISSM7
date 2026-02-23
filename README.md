@@ -32,6 +32,7 @@ Hệ thống được thiết kế nhằm phát hiện và cảnh báo sớm ngu
 
 Hệ thống hoạt động theo kiến trúc đa tầng:
 - **Tầng 1** - Dự đoán nguy cơ môi trường (MLP)
+
   Sử dụng mạng nơ-ron truyền thẳng (Multi-Layer Perceptron) để phân tích các yếu tố môi trường:
   + Nhiệt độ
   + Độ ẩm
@@ -44,6 +45,7 @@ Hệ thống hoạt động theo kiến trúc đa tầng:
   + Medium
   +High
 - **Tầng 2** - Phát hiện hình ảnh (CNN)
+
   Sử dụng mạng tích chập (Convolutional Neural Network) để:
   + Phát hiện khói
   + Phát hiện lửa
@@ -55,6 +57,7 @@ Hệ thống hoạt động theo kiến trúc đa tầng:
   + Quantized int8
   + Tối ưu để chạy trên ESP32-S3
 - **Tầng 3** - Hệ chuyên gia (Rule-Based System)
+
   Hệ chuyên gia kết hợp kết quả từ MLP và CNN để đưa ra cảnh báo cuối cùng theo cơ chế suy diễn tiến (Forward Chaining).
 
   Ví dụ luật:
