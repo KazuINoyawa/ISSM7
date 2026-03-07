@@ -43,7 +43,7 @@ Hệ thống hoạt động theo kiến trúc đa tầng:
   Mô hình dự đoán mức nguy cơ cháy rừng:
   + Low
   + Medium
-  +High
+  + High
 - **Tầng 2** - Phát hiện hình ảnh (CNN)
 
   Sử dụng mạng tích chập (Convolutional Neural Network) để:
@@ -90,4 +90,4 @@ Hệ thống hoạt động theo kiến trúc đa tầng:
 ## 8. Kết luận
 
 --- 
-- Release: 1.1.0
+- Release: 1.2.0
